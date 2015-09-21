@@ -3,6 +3,16 @@ Graphical Data Visualization of an Analog Sensor
 *********************************************************************************/
 #define DEBUG true                          
 int g_sensorPin = A0;
+
+/*********************************************************************************
+Function Name     : setup
+Description       : Initialize the Serial Communication with baud 9600, connect 
+                    to the esp8266 with BAUD 115200 and initialize the sensor 
+                    as INPUT.
+Parameters        : void
+Return            : void
+*********************************************************************************/
+
 void setup() {
   //Begin the Serial Communication Between the ESP8266 and AVR Chip with Baud 115200
   Serial4.begin(115200);
@@ -13,6 +23,14 @@ void setup() {
   espCommand("AT",500,DEBUG);
   espCommand("AT+RST",2000,DEBUG);
 }
+
+/*********************************************************************************
+Function Name     : loop
+Description       : Connect to the ThingSpeak API with TCP/IP Connection 
+                    and post the sensor status to the graph
+Parameters        : void
+Return            : void
+*********************************************************************************/
 
 void loop() {
   char l_buffer[6] = "";
@@ -34,6 +52,17 @@ void loop() {
   espCommand("AT+RST",2000,DEBUG);
 }
 
+/*********************************************************************************
+Function Name     : espCommand
+Description       : Command the ESP8266 with AT Commands and receive the response
+                    sent from the ESP8266 Module
+Parameters        : p_command, p_timeout, p_debug
+        p_command : AT Command for Requesting the ESP8266
+        p_timeout : Timeout for the each Command
+        p_debug   : if debug is True Serial Print the response obtained from 
+                    the sensor
+Return            : void
+*********************************************************************************/
 String espCommand(String p_command, const int p_timeout, boolean p_debug)
 {
   String l_response = "";

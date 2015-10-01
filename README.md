@@ -12,4 +12,4 @@ Graphical Data Visualization of any Analog Sensor using Tiva C Series TM4C123G, 
 
 ####GRAPH USING THE RAW DATA OF THE SENSOR
 
-![images][graph]
+![image][graph]

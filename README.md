@@ -1,5 +1,6 @@
 # esp8266-thingspeak
-[image-graph]:images/analogGraph.png
+
+[image-graph]: images/anlogGraph.png
 
 Graphical Data Visualization of any Analog Sensor using Tiva C Series TM4C123G, ESP8266 and Thingspeak API without using any external chip.
 

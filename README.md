@@ -1,4 +1,5 @@
 # esp8266-thingspeak
+[graph]:images/analogGraph.png
 
 Graphical Data Visualization of any Analog Sensor using Tiva C Series TM4C123G, ESP8266 and Thingspeak API without using any external chip.
 
@@ -9,4 +10,6 @@ Graphical Data Visualization of any Analog Sensor using Tiva C Series TM4C123G, 
 - Enter ```http://arduino.esp8266.com/stable/package_esp8266com_index.json``` into *Additional Board Manager URLs* field. You can add multiple URLs, separating them with commas.
 - Open Boards Manager from Tools > Board menu and install *esp8266* platform (and don't forget to select your ESP8266 board from Tools > Board menu after installation).
 
-file:///home/surya/Desktop/anlogGraph.png
+####GRAPH USING THE RAW DATA OF THE SENSOR
+
+![images][graph]
